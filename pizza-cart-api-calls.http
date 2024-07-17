@@ -1,0 +1,71 @@
+
+## To use HTTP endpoint install the REST client plugin in VSCODE
+
+GET https://pizza-api.projectcodex.net/api/pizzas
+
+### create client cart
+
+GET https://pizza-api.projectcodex.net/api/pizza-cart/create?username=Luvuyo
+
+### get a cart
+
+GET https://pizza-api.projectcodex.net/api/pizza-cart/ySTxAFwiQw/get
+
+
+### Add a pizza in the cart
+
+POST https://pizza-api.projectcodex.net/api/pizza-cart/add
+Content-Type: application/json
+
+{
+    "cart_code": "ySTxAFwiQw",
+    "pizza_id": 10
+}
+
+
+### Add a pizza in the cart
+
+POST https://pizza-api.projectcodex.net/api/pizza-cart/add
+Content-Type: application/json
+
+{
+    "cart_code": "ySTxAFwiQw",
+    "pizza_id": 11
+}
+
+
+
+### Remove a pizza in the cart
+
+POST https://pizza-api.projectcodex.net/api/pizza-cart/remove
+Content-Type: application/json
+
+{
+    "cart_code": "Mn52PXDxXb",
+    "pizza_id": 11
+}
+
+### get all the carts for a given user
+GET https://pizza-api.projectcodex.net/api/pizza-cart/create?username=Luvuyo
+
+
+### get all active carts for a given user
+
+GET https://pizza-api.projectcodex.net/api/pizza-cart/create?username=Luvuyo/active
+
+
+### feature pizza
+
+GET https://pizza-api.projectcodex.net/api/pizzas/featured
+content-Type: application/json
+
+{
+    "username": "Luvuyo",
+    "pizza_id": 11
+}
+
+
+POST https://pizza-api.projectcodex.net/api/pizzas/featured
+
+GET https://pizza-api.projectcodex.net/api/pizza-cart/username/rhyno
+content-type: application/json

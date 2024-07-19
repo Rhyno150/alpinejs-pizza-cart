@@ -34,13 +34,14 @@
 </head>
 
 <body x-data="pizzaCart"
-    style="background-image: url(images/background.png); background-size: cover;background-attachment: fixed">
+style="background-image: url(stockphoto.jpg); background-size: cover;background-attachment: fixed"> 
+ <!-- <img src="back.jpg" class="round-image" width="70%"><br>  -->
     <main class="container">
         <section>
             <div class="card">
                 <div class="row">
 
-                    <div class="col l4 s12 m12" x-cloak style="text-align: center; background-color: palegoldenrod" x-cloak>
+                    <div class="col l4 s12 m12" x-cloak style="text-align: center; background-color: #F7CE5B" x-cloak>
                         <h3 x-text="title"></h3>
 
                         <div>
@@ -59,6 +60,8 @@
                     </div>
                     <!-- Funtionality to our addding button starts here -->
                     <div class="col l8 m12 s12" style="text-align: right;" x-cloak>
+   
+
                         <div>
                             <div x-show="cartId">
                                 <label class="waves-effect waves-light btn" x-show="username.length>0">Welcome, <span
@@ -83,7 +86,7 @@
                             <div style="text-align: center;" x-show="change>0">
                                 Your change is R<span x-text="change.toFixed(2)"></span>
                             </div>
-
+                            <img src="back.jpg" class="round-image" width="100%"><br> 
                             <div x-show="open && cartTotal>0">
 
                                 <table>
@@ -213,7 +216,7 @@
 
                         <template x-for="pizza in featuredpizzas">
                             <div class="col l4 m12 s12" style="text-align: center; background-color: blue">
-                                <img x-bind:src="pizzaImage(pizza)" width="90%"><br><br>
+                                 <img x-bind:src="pizzaImage(back.jpg") width="90%"><br><br> 
                                 <span>Flavour: </span><strong><span x-text="pizza.flavour"></span></strong><br><br>
                                 <span>Size: </span><strong><span x-text="pizza.size"></span></strong><br><br>
                                 <span>Price: </span><strong>R<span x-text="pizza.price"></span></strong><br><br>
@@ -241,11 +244,11 @@
                     <template x-for="pizza in pizzas">
                         <template x-if="pizza['size']=='small'">
                             <div class="col l4 m12 s12" x-show="username  && cartId"
-                                style="text-align: center; background-color: rgb(246, 255, 0)">
+                                style="text-align: center; background-color: white">
 
                                 <div class="pizza">
                                     <h5 x-text="pizza.flavour"></h5>
-                                    <!-- <img src="images/small.png" width="50%"><br> -->
+                                     <img src="small.png" class="round-image" width="70%"><br> 
                                     <span x-text="pizza.size"></span><br>
                                     <strong>
                                         R<span x-text="pizza.price"></span>
@@ -261,11 +264,11 @@
                     <template x-for="pizza in pizzas">
                         <template x-if="pizza['size']=='medium'">
                             <div class="col l4 m12 s12" x-show="username  && cartId"
-                                style="text-align: center; background-color: rgb(26, 255, 0)">
+                                style="text-align: center; background-color: #FEFADC">
 
                                 <div class="pizza">
                                     <h5 x-text="pizza.flavour"></h5>
-                                    <!-- <img src="images/medium.png" width="50%"><br> -->
+                                     <img src="medium.png" width="70%"><br>
                                     <span x-text="pizza.size"></span><br>
                                     <strong>
                                         R<span x-text="pizza.price"></span>
@@ -281,11 +284,11 @@
                     <template x-for="pizza in pizzas">
                         <template x-if="pizza['size']=='large'">
                             <div class="col l4 m12 s12" x-show="username  && cartId"
-                                style="text-align: center; background-color: rgb(255, 0, 251)">
+                                style="text-align: center; background-color: #BFDBF7">
 
                                 <div class="pizza">
                                     <h5 x-text="pizza.flavour"></h5>
-                                    <!-- <img src="images/large.png" width="50%"><br> -->
+                                    <img src="large.png" width="70%"><br> 
                                     <span x-text="pizza.size"></span><br>
                                     <strong>
                                         R<span x-text="pizza.price"></span>

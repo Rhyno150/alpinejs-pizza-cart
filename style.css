@@ -2,8 +2,13 @@
     border: 1px solid;
     margin-bottom: 1em ;
     padding: 1em;
+    /* clip-path: circle(50%); */
 }
 
 body {
     background-color: #1982C4;
 }
+
+/* .row { */
+ /* clip-path: circle(40px); */
+/* } */

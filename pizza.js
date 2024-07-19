@@ -128,7 +128,7 @@ document.addEventListener("alpine:init", () => {
           .get("https://pizza-api.projectcodex.net/api/pizzas")
           .then((result) => {
             //code here
-            // console.log(result.data);
+             console.log(result.data.pizzas);
             this.pizzas = result.data.pizzas;
             //code here..
           });

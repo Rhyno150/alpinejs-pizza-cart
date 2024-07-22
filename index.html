@@ -33,6 +33,71 @@
     </style>
 </head>
 
+
+<section class="featured-section">
+    <div class="container">
+        <h2>Featured Pizzas</h2>
+        <div class="row">
+            <!-- Featured Pizza Items Go Here -->
+            <div class="col l4 m12 s12">
+                <div class="card featured-pizza">
+                    <div class="pizza">
+                        <h5>Large Pizza </h5>
+                        <img src="S..jpg" class="round-image" width="70%">
+                        <span>Large</span><br>
+                        <strong>R120.00</strong>
+                        <div>
+                            <button class="waves-effect waves-light btn">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m12 s12">
+                <div class="card featured-pizza">
+                    <div class="pizza">
+                        <h5>Medium Pizza </h5>
+                        <img src="medium.png" class="round-image" width="70%">
+                        <span>Medium</span><br>
+                        <strong>R85.00</strong>
+                        <div>
+                            <button class="waves-effect waves-light btn">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m12 s12">
+                <div class="card featured-pizza">
+                    <div class="pizza">
+                        <h5>Small Pizza </h5>
+                        <img src="M.jpg" class="round-image" width="70%">
+                        <span>Small</span><br>
+                        <strong>R55.00</strong>
+                        <div>
+                            <button class="waves-effect waves-light btn">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section>
+        <div class="container">
+            <div class="card">
+                <div class="row">
+                    <!-- Your existing pizza list section goes here -->
+                    <!-- Make sure to keep your existing structure as per your previous code -->
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
 <body x-data="pizzaCart"
 style="background-image: url(360.jpg); background-size: cover;background-attachment: fixed"> 
  <!-- <img src="back.jpg" class="round-image" width="70%"><br>  -->
@@ -214,7 +279,7 @@ style="background-image: url(360.jpg); background-size: cover;background-attachm
                         <!-- Feature pizza -->
                         <h5>FEATURED PIZZAS</h5>
 
-                        <template x-for="pizza in featuredpizzas">
+                        <template x-for="pizza in featured pizzas">
                             <div class="col l4 m12 s12" style="text-align: center; background-color: blue">
                                  <img x-bind:src="pizzaImage(back.jpg") width="90%"><br><br> 
                                 <span>Flavour: </span><strong><span x-text="pizza.flavour"></span></strong><br><br>
@@ -248,7 +313,7 @@ style="background-image: url(360.jpg); background-size: cover;background-attachm
 
                                 <div class="pizza">
                                     <h5 x-text="pizza.flavour"></h5>
-                                     <img src="small.png" class="round-image" width="70%"><br> 
+                                     <img src="small.jpg" class="round-image" width="70%"><br> 
                                     <span x-text="pizza.size"></span><br>
                                     <strong>
                                         R<span x-text="pizza.price"></span>
@@ -288,7 +353,7 @@ style="background-image: url(360.jpg); background-size: cover;background-attachm
 
                                 <div class="pizza">
                                     <h5 x-text="pizza.flavour"></h5>
-                                    <img src="large.png" width="70%"><br> 
+                                    <img src="S..jpg" width="70%"><br> 
                                     <span x-text="pizza.size"></span><br>
                                     <strong>
                                         R<span x-text="pizza.price"></span>

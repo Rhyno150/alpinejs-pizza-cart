@@ -2,13 +2,76 @@
     border: 1px solid;
     margin-bottom: 1em ;
     padding: 1em;
-    /* clip-path: circle(50%); */
+}
+   /* clip-path: circle(40%); 
 }
 
 body {
     background-color: #1982C4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* .row { */
  /* clip-path: circle(40px); */
 /* } */
+/* Apply styles to the main card section */
+.card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style each pizza item */
+.pizza {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.pizza h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.pizza img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.pizza span {
+    font-size: 14px;
+    color: #555;
+}
+
+.pizza strong {
+    font-size: 16px;
+}
+
+/* Button styles */
+.btn {
+    background-color: #FF6F61;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #E4572E;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .pizza img {
+        width: 100%;
+    }
+}
+
+

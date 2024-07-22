@@ -18,6 +18,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
     <!-- Compiled and minified JavaScript -->
+
+    <script>
+        const app = {
+            data() {
+                return {
+                    username: '',
+                    cartId: '',
+                    pizzas: [], // Array of all pizzas
+                    featuredPizzas: [  // Array of featured pizzas
+                        { flavour: 'Supreme', size: 'Large', price: '75.00', image: 'supreme.jpg', id: 1 },
+                        { flavour: 'Vegetarian', size: 'Medium', price: '65.00', image: 'vegetarian.jpg', id: 2 },
+                        { flavour: 'Margherita', size: 'Small', price: '55.00', image: 'margherita.jpg', id: 3 }
+                    ]
+                };
+            },
+            methods: {
+                addPizzaToCart(pizzaId) {
+                    // Logic to add pizza to cart
+                }
+            }
+        };
+    </script>
+    
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
         [x-cloak] {
@@ -34,53 +59,7 @@
 </head>
 
 
-<section class="featured-section">
-    <div class="container">
-        <h2>Featured Pizzas</h2>
-        <div class="row">
-            <!-- Featured Pizza Items Go Here -->
-            <div class="col l4 m12 s12">
-                <div class="card featured-pizza">
-                    <div class="pizza">
-                        <h5>Large Pizza </h5>
-                        <img src="S..jpg" class="round-image" width="70%">
-                        <span>Large</span><br>
-                        <strong>R120.00</strong>
-                        <div>
-                            <button class="waves-effect waves-light btn">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m12 s12">
-                <div class="card featured-pizza">
-                    <div class="pizza">
-                        <h5>Medium Pizza </h5>
-                        <img src="medium.png" class="round-image" width="70%">
-                        <span>Medium</span><br>
-                        <strong>R85.00</strong>
-                        <div>
-                            <button class="waves-effect waves-light btn">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 m12 s12">
-                <div class="card featured-pizza">
-                    <div class="pizza">
-                        <h5>Small Pizza </h5>
-                        <img src="M.jpg" class="round-image" width="70%">
-                        <span>Small</span><br>
-                        <strong>R55.00</strong>
-                        <div>
-                            <button class="waves-effect waves-light btn">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <main>
     <section>
@@ -293,6 +272,54 @@ style="background-image: url(360.jpg); background-size: cover;background-attachm
                         </template>
 
 
+
+                        <section class="featured-section"  x-show="username && cartId">
+                            <div class="container">
+                                <h2>Featured Pizzas</h2>
+                                <div class="row">
+                                    <!-- Featured Pizza Items Go Here -->
+                                    <div class="col l4 m12 s12">
+                                        <div class="card featured-pizza">
+                                            <div class="pizza">
+                                                <h5>Large Pizza </h5>
+                                                <img src="S..jpg" class="round-image" width="70%">
+                                                <span>Large</span><br>
+                                                <strong>R120.00</strong>
+                                                <div>
+                                                    <button class="waves-effect waves-light btn">Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l4 m12 s12">
+                                        <div class="card featured-pizza">
+                                            <div class="pizza">
+                                                <h5>Medium Pizza </h5>
+                                                <img src="medium.png" class="round-image" width="70%">
+                                                <span>Medium</span><br>
+                                                <strong>R85.00</strong>
+                                                <div>
+                                                    <button class="waves-effect waves-light btn">Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l4 m12 s12">
+                                        <div class="card featured-pizza">
+                                            <div class="pizza">
+                                                <h5>Small Pizza </h5>
+                                                <img src="M.jpg" class="round-image" width="70%">
+                                                <span>Small</span><br>
+                                                <strong>R55.00</strong>
+                                                <div>
+                                                    <button class="waves-effect waves-light btn">Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <!-- Feature pizza ends here -->
 
                     </div>

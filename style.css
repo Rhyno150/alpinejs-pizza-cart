@@ -128,3 +128,24 @@ body {
     background-color: #E4572E;
 }
 
+
+/* Small screens */
+@media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 768px) {
+    img {
+      width: 500px;
+    }
+  }
+
+  .featured-section img {
+    width: 100%; /* Make image fill container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  

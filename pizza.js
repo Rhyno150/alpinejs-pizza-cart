@@ -114,7 +114,7 @@ document.addEventListener("alpine:init", () => {
       postfeaturedpizzas() {
         axios
           .post("https://pizza-api.projectcodex.net/api/pizzas/featured", {
-            username: "Fabchirajoul",
+            username: "Luvuyo",
             pizza_id: pizzaId,
           })
           .then(() => this.featuredPizzas());
@@ -234,3 +234,80 @@ document.addEventListener("alpine:init", () => {
     };
   });
 });
+
+
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('pizzaOrder', () => ({
+      orders: [],
+      showOrderHistory: false,
+      addPizzaToCart(pizzaId) {
+        const newOrder = {
+          id: Date.now(),
+          pizzaId
+        };
+        this.orders.push(newOrder);
+        this.showOrderHistory = true;
+      }
+    }))
+  })
+
+
+  function loadOrderHistory() {
+    this.loading = true;
+    getOrderHistory()
+      .then(orders => {
+        this.orders = orders;
+        this.loading = false;
+      })
+      .catch(error => {
+        console.error('Error fetching order history:', error);
+        this.loading = false;
+      });
+  }
+
+
+  fetch('https://api.example.com/data')
+       .then(response => response.json())
+       .then(data => {
+         console.log(data); // Data is available here
+       })
+       .catch(error => console.error('Error fetching data:', error));
+  // fetch('https://api.example.com/data')
+  //      .then(response => response.json()) // This returns a promise
+  //      .then(data => console.log(data)); // You're trying to use 'data' before the fetch is complete
+
+  //  console.log(data); // This will log 'undefined' because 'data' is not yet available
+
+
+//   init() {
+//     const storedUsername = localStorage["username"];
+//     if (storedUsername) {
+//         // ...
+//     }
+
+//     axios
+//         .get("https://pizza-api.projectcodex.net/api/pizzas")
+//         .then((result) => {
+//             console.log(result.data.pizzas);
+//             this.pizzas = result.data.pizzas;
+//             // ...
+//         })
+//         .catch((error) => {
+//             console.error("API Error:", error);
+//             // Display an error message to the user
+//             // e.g., alert("Failed to load pizzas. Please try again later.");
+//         });
+
+//     if (!this.cartId) {
+//         this.createCart()
+//             .then(() => {
+//                 this.showCartData();
+//             })
+//             .catch((error) => {
+//                 console.error("Cart Creation Error:", error);
+//                 // Handle cart creation errors
+//             });
+//     }
+//     this.featuredPizzas();
+// }
+

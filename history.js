@@ -45,3 +45,4 @@ const pizzaCart = {
 window.addEventListener('DOMContentLoaded', () => {
     Alpine.data('pizzaCart', () => pizzaCart);
 });
+

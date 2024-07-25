@@ -11,10 +11,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* .row { */
- /* clip-path: circle(40px); */
-/* } */
-/* Apply styles to the main card section */
+.row { 
+  clip-path: circle(40px); 
+} 
+ Apply styles to the main card section 
 .card {
     margin: 20px;
     padding: 20px;
@@ -54,7 +54,7 @@ body {
 
 /* Button styles */
 .btn {
-    background-color: #FF6F61;
+    background-color: green;
     color: white;
     border-radius: 20px;
     padding: 8px 16px;
@@ -64,7 +64,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #E4572E;
+    background-color: green;
 }
 
 /* Responsiveness */
@@ -115,7 +115,7 @@ body {
 
 /* Button styles for featured pizzas */
 .featured-pizza .btn {
-    background-color: #FF6F61;
+    background-color: green;
     color: white;
     border-radius: 20px;
     padding: 8px 16px;
@@ -125,7 +125,7 @@ body {
 }
 
 .featured-pizza .btn:hover {
-    background-color: #E4572E;
+    background-color: green;
 }
 
 
@@ -147,5 +147,11 @@ body {
     width: 100%; /* Make image fill container width */
     height: auto; /* Maintain aspect ratio */
 }
+
+.footer-page {
+    background-color: yellow;
+}
+
+
 
   

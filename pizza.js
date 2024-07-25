@@ -104,7 +104,7 @@ document.addEventListener("alpine:init", () => {
       featuredpizzas() {
         axios
           .get(
-            "https://pizza-api.projectcodex.net/api/pizzas/featured?username=XolaniSibisi"
+            "https://pizza-api.projectcodex.net/api/pizzas/featured?username=LuvuyoNdlovu"
           )
           .then((result) => {
             this.featuredpizzas = result.data.pizzas;
